@@ -23,8 +23,8 @@ const Footer = () => {
         </div>
 
         {/* Footer columns */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 hairline-top pt-10 md:pt-12">
-          <div className="col-span-2 md:col-span-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 hairline-top pt-10 md:pt-12">
+          <div className="sm:col-span-2 md:col-span-2">
             <Link to="/" className="block">
               <img 
                 src="/logo.png" 
@@ -71,14 +71,14 @@ const Footer = () => {
             <h4 className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-5">Reach us</h4>
             <ul className="space-y-4 text-sm text-muted-foreground">
               <li>
-                <a href="mailto:gradelabstudios@gmail.com" className="flex items-center gap-3 hover:text-foreground transition-colors">
-                  <Mail className="h-4 w-4 opacity-70" strokeWidth={1.5} />
-                  gradelabstudios@gmail.com
+                <a href="mailto:gradelabstudios@gmail.com" className="flex items-start gap-3 hover:text-foreground transition-colors">
+                  <Mail className="h-4 w-4 opacity-70 mt-0.5" strokeWidth={1.5} />
+                  <span className="break-all">gradelabstudios@gmail.com</span>
                 </a>
               </li>
               <li>
-                <a href="tel:+919911990332" className="flex items-center gap-3 hover:text-foreground transition-colors">
-                  <Phone className="h-4 w-4 opacity-70" strokeWidth={1.5} />
+                <a href="tel:+919911990332" className="flex items-start gap-3 hover:text-foreground transition-colors">
+                  <Phone className="h-4 w-4 opacity-70 mt-0.5" strokeWidth={1.5} />
                   +91 9911990332
                 </a>
               </li>

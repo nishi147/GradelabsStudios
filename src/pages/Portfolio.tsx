@@ -6,47 +6,51 @@ import Reveal from "@/components/Reveal";
 
 type Cat = "all" | "ecommerce" | "cinematic" | "short-form";
 
-const projects: { title: string; cat: Exclude<Cat, "all">; desc: string; icon?: any; tone?: string; video?: string }[] = [
+const projects: { title: string; cat: Exclude<Cat, "all">; desc: string; icon?: any; tone?: string; video?: string; tag?: string }[] = [
   { 
-    title: "Week 1st_video", 
+    title: "Action Sports Coverage", 
     cat: "short-form", 
+    tag: "DYNAMIC EVENT CINEMATOGRAPHY",
     desc: "Dynamic short-form content creation for a high-profile client, showcasing versatile editing styles and engaging storytelling.", 
-    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358223/Week_1_1st_video_colour_graded_final_okbfr1.mp4"
   },
-  // { 
-  //   title: "Employment & Scaling", 
-  //   cat: "short-form", 
-  //   desc: "Deep-dive podcast episode management with professional audio mixing and multicam grading.", 
-  //   video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922320/02_-_Purbi_Podcast_-_Employment_and_Scaling_g6iku5.mp4",
-  //   tone: "from-zinc-700 to-zinc-900"
-  // },
   { 
-    title: "WearESO Launch", 
+    title: "WearESO Activewear Campaign", 
     cat: "cinematic", 
+    tag: "DTC • APPAREL LAUNCH",
     desc: "Cinematic launch video for WearESO, showcasing high-end fashion with dynamic editing and rich color grading.", 
     video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358357/WearESO_Launch_zytmkp.mp4"
   },
   { 
-    title: "EduCollege AI Monster", 
+    title: "EduCollege AI Commercial", 
     cat: "ecommerce", 
+    tag: "VFX & 3D INTEGRATION",
     desc: "AI-driven commercial video for educational tech platforms.", 
     video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922220/EduCollege_Ai_video_monster_cip5iw.mp4",
     tone: "from-zinc-800 to-black"
   },
   { 
-    title: "Christmas in Hiroshima", 
+    title: "Creator Vlog Production", 
     cat: "ecommerce", 
+    tag: "HIGH-RETENTION EDITING",
     desc: "Seasonal campaign video for a Japanese e-commerce brand, blending cinematic storytelling with festive visuals.", 
     video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358743/Christmas_In_Hiroshima_kowfsx.mp4",
     tone: "from-amber-900/40 to-zinc-900"
   },
   { 
-    title: "Cinematic Brand Reel", 
+    title: "International Travel Narrative", 
     cat: "cinematic", 
+    tag: "CREATOR ECONOMY ASSETS",
     desc: "Dynamic brand storytelling featuring high-energy editing and precision color grading.", 
     video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777923843/Short_for_GL_Studios_Website_JP_New_year_riedrm.mp4",
     tone: "from-zinc-900 to-black"
   },
+  {
+    title: "Backyard Skatepark Promo",
+    cat: "short-form",
+    tag: "KINETIC TYPOGRAPHY & FX",
+    desc: "High-energy skatepark promotional video featuring dynamic typography and special effects.",
+    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358223/Week_1_1st_video_colour_graded_final_okbfr1.mp4"
+  }
 ];
 
 const filters: { id: Cat; label: string }[] = [
@@ -138,7 +142,7 @@ const Portfolio = () => {
                   </div>
                   <div className="flex items-start justify-between">
                     <div>
-                      <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-1">{filters.find(f => f.id === p.cat)?.label}</p>
+                      <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-1">{p.tag || filters.find(f => f.id === p.cat)?.label}</p>
                       <h3 className="font-serif-display text-xl transition-all">{p.title}</h3>
                     </div>
                     <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors mt-1" />

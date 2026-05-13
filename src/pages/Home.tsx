@@ -19,11 +19,12 @@ const testimonials = [
 ];
 
 const work = [
-  { tag: "Short-form · Content", title: "Week 1st_video", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358223/Week_1_1st_video_colour_graded_final_okbfr1.mp4" },
-  { tag: "Cinematic · Launch", title: "WearESO Launch", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358357/WearESO_Launch_zytmkp.mp4" },
-  { tag: "Edu-Tech · Commercial", title: "EduCollege AI Monster", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922220/EduCollege_Ai_video_monster_cip5iw.mp4" },
-  { tag: "E-commerce · Campaign", title: "Christmas in Hiroshima", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358743/Christmas_In_Hiroshima_kowfsx.mp4" },
-  { tag: "Cinematic · Brand Reel", title: "Cinematic Brand Reel", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777923843/Short_for_GL_Studios_Website_JP_New_year_riedrm.mp4" },
+  { tag: "DYNAMIC EVENT CINEMATOGRAPHY", title: "Action Sports Coverage" },
+  { tag: "DTC • APPAREL LAUNCH", title: "WearESO Activewear Campaign", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358357/WearESO_Launch_zytmkp.mp4" },
+  { tag: "VFX & 3D INTEGRATION", title: "EduCollege AI Commercial", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922220/EduCollege_Ai_video_monster_cip5iw.mp4" },
+  { tag: "HIGH-RETENTION EDITING", title: "Creator Vlog Production", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358743/Christmas_In_Hiroshima_kowfsx.mp4" },
+  { tag: "CREATOR ECONOMY ASSETS", title: "International Travel Narrative", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777923843/Short_for_GL_Studios_Website_JP_New_year_riedrm.mp4" },
+  { tag: "KINETIC TYPOGRAPHY & FX", title: "Backyard Skatepark Promo", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358223/Week_1_1st_video_colour_graded_final_okbfr1.mp4" },
 ];
 
 const Home = () => {
