@@ -19,7 +19,7 @@ const testimonials = [
 ];
 
 const work = [
-  { tag: "DYNAMIC EVENT CINEMATOGRAPHY", title: "Action Sports Coverage" },
+  { tag: "DYNAMIC EVENT CINEMATOGRAPHY", title: "Action Sports Coverage", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778691968/1.0_GradeLabStudios_Skatepark_Brand_Reel_hkhu5j.mp4" },
   { tag: "DTC • APPAREL LAUNCH", title: "WearESO Activewear Campaign", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358357/WearESO_Launch_zytmkp.mp4" },
   { tag: "VFX & 3D INTEGRATION", title: "EduCollege AI Commercial", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922220/EduCollege_Ai_video_monster_cip5iw.mp4" },
   { tag: "HIGH-RETENTION EDITING", title: "Creator Vlog Production", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358743/Christmas_In_Hiroshima_kowfsx.mp4" },

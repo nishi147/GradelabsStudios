@@ -12,6 +12,7 @@ const projects: { title: string; cat: Exclude<Cat, "all">; desc: string; icon?: 
     cat: "short-form", 
     tag: "DYNAMIC EVENT CINEMATOGRAPHY",
     desc: "Dynamic short-form content creation for a high-profile client, showcasing versatile editing styles and engaging storytelling.", 
+    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778691968/1.0_GradeLabStudios_Skatepark_Brand_Reel_hkhu5j.mp4"
   },
   { 
     title: "WearESO Activewear Campaign", 
@@ -102,7 +103,7 @@ const Portfolio = () => {
       {/* GRID */}
       <section className="py-12">
         <div className="container">
-          <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence mode="popLayout">
               {filtered.map((p, i) => (
                 <motion.div

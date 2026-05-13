@@ -224,11 +224,11 @@
     animation: fadeUp 0.8s var(--transition-smooth) both;
   }
   .marquee {
-    animation: marquee 20s linear infinite;
+    animation: marquee 10s linear infinite;
   }
   @media (max-width: 768px) {
     .marquee {
-      animation: marquee 10s linear infinite;
+      animation: marquee 5s linear infinite;
     }
   }
 }
