@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Play, Film, Camera, ShoppingBag } from "lucide-react";
+import { ArrowUpRight, Play, Film, Camera, ShoppingBag, LayoutTemplate } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 type Cat = "all" | "ecommerce" | "cinematic" | "short-form";
@@ -46,24 +46,42 @@ const projects: { title: string; cat: Exclude<Cat, "all">; desc: string; icon?: 
     tone: "from-zinc-900 to-black"
   },
   {
-    title: "Backyard Skatepark Promo",
-    cat: "short-form",
-    tag: "KINETIC TYPOGRAPHY & FX",
-    desc: "High-energy skatepark promotional video featuring dynamic typography and special effects.",
-    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358223/Week_1_1st_video_colour_graded_final_okbfr1.mp4"
+    title: "Bristol Fit Commercial Facility",
+    cat: "cinematic",
+    tag: "BRICK & MORTAR BRANDING",
+    desc: "Dynamic commercial branding video showcasing the energy and facilities of Bristol Fit.",
+    video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778855320/Bristol_Gym_For_Website_hbd5k2.mp4",
+    tone: "from-zinc-900 to-black"
   }
 ];
 
-const filters: { id: Cat; label: string }[] = [
-  { id: "all", label: "All work" },
-  { id: "ecommerce", label: "E-commerce Transformations" },
-  { id: "cinematic", label: "Cinematic Product Shoots" },
-  { id: "short-form", label: "Short-form & Content" },
+
+
+const digitalProjects = [
+  {
+    title: "Modern E-Commerce Storefront",
+    tag: "SHOPIFY PLUS",
+    desc: "A custom headless commerce solution designed for high-volume conversion and brand storytelling.",
+    tone: "from-zinc-800/80 to-black",
+    image: "https://res.cloudinary.com/dthwzsl69/image/upload/v1778855040/Mockup_image_for_website_laptop_frame_sgfd26.png"
+  },
+  {
+    title: "B2B Enterprise Platform",
+    tag: "WEB ARCHITECTURE",
+    desc: "A high-performance digital presence engineered to accelerate enterprise lead generation.",
+    tone: "from-zinc-800 to-zinc-900",
+    image: "https://res.cloudinary.com/dthwzsl69/image/upload/v1778854877/Mockup_image_for_website_ipad_frame_zyhtal.png"
+  },
+  {
+    title: "Technical SEO Framework",
+    tag: "SEARCH OPTIMIZATION",
+    desc: "Comprehensive technical overhaul driving sustained organic traffic and domain authority.",
+    tone: "from-zinc-900 to-black",
+    image: "https://res.cloudinary.com/dthwzsl69/image/upload/v1778854946/Mockup_image_for_website_IPHONE_frame_gfnrsl.png"
+  }
 ];
 
 const Portfolio = () => {
-  const [cat, setCat] = useState<Cat>("all");
-  const filtered = cat === "all" ? projects : projects.filter((p) => p.cat === cat);
 
   return (
     <div>
@@ -79,33 +97,20 @@ const Portfolio = () => {
               shot, edited and finished entirely in-house.
             </p>
           </Reveal>
-
-          <Reveal delay={0.1}>
-            <div className="mt-12 flex flex-wrap gap-2">
-              {filters.map((f) => (
-                <button
-                  key={f.id}
-                  onClick={() => setCat(f.id)}
-                  className={`px-5 py-2.5 rounded-full text-sm transition-all border ${
-                    cat === f.id
-                      ? "bg-foreground text-background border-foreground"
-                      : "bg-transparent text-muted-foreground border-border hover:text-foreground hover:border-foreground"
-                  }`}
-                >
-                  {f.label}
-                </button>
-              ))}
-            </div>
-          </Reveal>
         </div>
       </section>
 
-      {/* GRID */}
+      {/* VIDEO GRID */}
       <section className="py-12">
         <div className="container">
+          <Reveal>
+            <h2 className="font-serif-display text-3xl md:text-4xl mb-10">
+              Cinematic Production & Brand Narratives
+            </h2>
+          </Reveal>
           <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence mode="popLayout">
-              {filtered.map((p, i) => (
+              {projects.map((p, i) => (
                 <motion.div
                   key={p.title}
                   layout
@@ -132,18 +137,15 @@ const Portfolio = () => {
                       </div>
                     )}
                     {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-foreground/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                    <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                       <div>
-                        <p className="text-sm text-background/80 leading-relaxed mb-3">{p.desc}</p>
-                        <div className="inline-flex items-center gap-2 text-background text-sm">
-                          View project <ArrowUpRight className="h-4 w-4" />
-                        </div>
+                        <p className="text-sm text-white/90 leading-relaxed">{p.desc}</p>
                       </div>
                     </div>
                   </div>
                   <div className="flex items-start justify-between">
                     <div>
-                      <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-1">{p.tag || filters.find(f => f.id === p.cat)?.label}</p>
+                      <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-1">{p.tag}</p>
                       <h3 className="font-serif-display text-xl transition-all">{p.title}</h3>
                     </div>
                     <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors mt-1" />
@@ -155,9 +157,63 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* DIGITAL GRID */}
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container">
+          <Reveal>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+              <div>
+                <h2 className="font-serif-display text-3xl md:text-4xl mb-4">
+                  Digital Architecture & E-Commerce Growth
+                </h2>
+                <p className="text-muted-foreground max-w-xl">
+                  High-converting digital experiences, enterprise-grade storefronts, and 
+                  data-driven search optimization.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {digitalProjects.map((p, i) => (
+              <Reveal key={p.title} delay={i * 0.1}>
+                <div className="group cursor-pointer">
+                  {/* Visual content */}
+                  <div className={`relative aspect-[4/3] bg-gradient-to-br ${p.tone} overflow-hidden rounded-[var(--radius)] mb-4 border border-border flex items-center justify-center`}>
+                    {p.image ? (
+                      <img 
+                        src={p.image} 
+                        alt={p.title} 
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                    ) : (
+                      <div className="opacity-40">
+                        <LayoutTemplate className="h-12 w-12" strokeWidth={1.2} />
+                      </div>
+                    )}
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                      <div>
+                        <p className="text-sm text-white/90 leading-relaxed">{p.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-1">{p.tag}</p>
+                      <h3 className="font-serif-display text-xl transition-all">{p.title}</h3>
+                    </div>
+                    <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors mt-1" />
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
-      <section className="py-32 surface-soft">
+      <section className="py-32 surface-soft border-t border-border/50">
         <div className="container">
           <Reveal>
             <h2 className="font-serif-display text-4xl md:text-7xl leading-[1.05] max-w-4xl">
