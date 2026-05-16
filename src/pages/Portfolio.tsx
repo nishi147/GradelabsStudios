@@ -174,12 +174,12 @@ const Portfolio = () => {
             </div>
           </Reveal>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
             {digitalProjects.map((p, i) => (
-              <Reveal key={p.title} delay={i * 0.1}>
+              <Reveal key={p.title} delay={i * 0.1} className={i === 0 ? "sm:col-span-2" : ""}>
                 <div className="group cursor-pointer">
                   {/* Visual content */}
-                  <div className={`relative aspect-[4/3] bg-gradient-to-br ${p.tone} overflow-hidden rounded-[var(--radius)] mb-4 border border-border flex items-center justify-center`}>
+                  <div className={`relative aspect-[4/3] ${i === 0 ? "sm:aspect-[21/9] md:aspect-[16/7]" : ""} bg-gradient-to-br ${p.tone} overflow-hidden rounded-[var(--radius)] mb-4 border border-border flex items-center justify-center`}>
                     {p.image ? (
                       <img 
                         src={p.image} 
