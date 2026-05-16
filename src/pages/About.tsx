@@ -70,7 +70,7 @@ const About = () => {
       <div className="grid md:grid-cols-[1fr_2fr] gap-8 md:gap-12 items-center">
         
         {/* Founder Image */}
-        <div className="aspect-[4/5] max-w-[240px] md:max-w-none overflow-hidden rounded-[var(--radius)] border border-border">
+        <div className="aspect-[4/5] max-w-[240px] md:max-w-none overflow-hidden rounded-[var(--radius)] border border-border mx-auto md:mx-0">
           <img
             src="/GLS.png"
             alt="Ayush Mahato"

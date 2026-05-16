@@ -278,7 +278,7 @@ const Contact = () => {
       </section>
 
       {/* CLOSING */}
-      <section className="py-16 md:py-32 mt-10 md:mt-16 surface-soft">
+      <section className="py-16 md:py-32 mt-8 md:mt-16 surface-soft">
         <div className="container">
           <Reveal>
             <h2 className="font-serif-display text-3xl md:text-7xl leading-[1.05] max-w-5xl">
