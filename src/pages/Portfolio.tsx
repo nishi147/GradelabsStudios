@@ -233,11 +233,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
-
-
-    </div>
-  );
-};
-
-export default Portfolio;
