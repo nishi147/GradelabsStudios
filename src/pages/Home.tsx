@@ -24,7 +24,7 @@ const work = [
   { tag: "VFX & 3D INTEGRATION", title: "EduCollege AI Commercial", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777922220/EduCollege_Ai_video_monster_cip5iw.mp4" },
   { tag: "HIGH-RETENTION EDITING", title: "Creator Vlog Production", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358743/Christmas_In_Hiroshima_kowfsx.mp4" },
   { tag: "CREATOR ECONOMY ASSETS", title: "International Travel Narrative", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1777923843/Short_for_GL_Studios_Website_JP_New_year_riedrm.mp4" },
-  { tag: "KINETIC TYPOGRAPHY & FX", title: "Backyard Skatepark Promo", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778358223/Week_1_1st_video_colour_graded_final_okbfr1.mp4" },
+  { tag: "BRICK & MORTAR BRANDING", title: "Bristol Fit Commercial Facility", video: "https://res.cloudinary.com/dthwzsl69/video/upload/v1778855320/Bristol_Gym_For_Website_hbd5k2.mp4" },
 ];
 
 const Home = () => {
@@ -119,8 +119,8 @@ const Home = () => {
           <p className="text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">Trusted by ambitious teams</p>
         </div>
         <div className="relative overflow-hidden">
-          <div className="flex marquee gap-16 whitespace-nowrap">
-            {[..."THE DASH MEDIA·NEXCORE TECHNOLOGIES·ASTRIX·NORTHWIND·LUMERA·AETHERWAVE·HILLTOP·OBSIDIAN·HELIX·KINETIC·VANTAGE·NORTHWIND·LUMERA·AETHERWAVE·HILLTOP·OBSIDIAN·HELIX·KINETIC·VANTAGE".split("·")].map((b, i) => (
+          <div className="flex marquee gap-16 whitespace-nowrap w-max">
+            {[...["THE DASH MEDIA", "NEXCORE TECHNOLOGIES", "ASTRIX", "NORTHWIND", "LUMERA", "AETHERWAVE", "HILLTOP", "OBSIDIAN", "HELIX", "KINETIC", "VANTAGE"], ...["THE DASH MEDIA", "NEXCORE TECHNOLOGIES", "ASTRIX", "NORTHWIND", "LUMERA", "AETHERWAVE", "HILLTOP", "OBSIDIAN", "HELIX", "KINETIC", "VANTAGE"]].map((b, i) => (
               <span key={i} className="font-serif-display text-2xl md:text-3xl text-muted-foreground/60">{b}</span>
             ))}
           </div>
